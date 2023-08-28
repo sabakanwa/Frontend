@@ -1,0 +1,35 @@
+.con {
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 1px;
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.text {
+  font-size: 15px;
+  margin-left: auto;
+}
+
+.yell {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.yel {
+  color: rgb(196, 127, 0);
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .con {
+    grid-template-columns: 1fr;
+  }
+
+  .text {
+    font-size: 12px; /* Adjust the font size for smaller screens */
+  }
+}

@@ -1,0 +1,97 @@
+
+.category_image {
+  text-align: center; /* Center-align the content */
+}
+
+.category_list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: inline-block; /* Center horizontally */
+  text-align: left; /* Reset text alignment within list items */
+}
+
+.category_set {
+  margin: 10px;
+  display: inline-block;
+  text-align: center;
+}
+
+
+h2{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    
+}
+
+.card {
+  
+    width: 250px;
+    height: 254px;
+    border-radius: 17px ;
+    /* padding: 5px; */
+    box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+    background-image: linear-gradient(144deg,#ff7c40, #f3a042 50%,#f5e93d);
+  }
+  
+  button{
+    box-shadow: 0 0 3px rgb(190, 109, 34);
+    color: #020202;
+    background : linear-gradient(#f7e708,#f0d17e);
+  }
+  button:hover{
+    background: #fa9b0d;
+    box-shadow: 0 0 5px rgb(255, 230, 0);
+  }
+  .card__content {
+    background: rgb(5, 6, 45);
+    border-radius: 17px;
+    width: 100%;
+    height: 100%;
+  }
+
+
+ .itemimage {
+  margin-top: 40px;
+  margin-left: 85px;
+  padding-left: 40px;
+  width: 400px;
+  height: 500px;
+  border-radius: 17px;
+  padding: 5px;
+  box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+  background-image: linear-gradient(144deg, #ff9640, #eed80f 50%, #eb5e00);
+}
+
+@media (max-width: 768px) {
+  .itemimage {
+      width: 100%; /* Adjusted width for smaller screens */
+      max-width: 400px; /* Limit maximum width for larger screens */
+      height: auto; /* Allow height to adjust based on content */
+      margin-left: 0; /* Reset margin on the left */
+      padding-left: 0; /* Reset padding on the left */
+  }
+}
+
+  
+ .title{
+  color:'#b86e14';
+  margin-top: 5px;
+  padding-top: 5px;
+  font-size: 40px;
+  
+ }
+ .quantity{
+color: #000000;
+font-size: 20px;
+ }
+.form-control{
+  box-shadow: 0 0 3px rgb(255, 126, 5);
+    color: #000000;
+    background : linear-gradient(#cf8d29,#ebd15d);
+}
+.canvas{
+  text-align: center;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  
+}
+
