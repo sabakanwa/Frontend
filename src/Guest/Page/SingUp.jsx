@@ -2,6 +2,7 @@ import React from 'react'
 import { useState } from 'react';
 import axios from 'axios';
 import { AppRoute } from '../../App';
+import Swal from 'sweetalert2'
 
 
 
@@ -17,6 +18,12 @@ function SingUp() {
     axios.post(`${AppRoute}api/singup`, payload)
      .then(json => {console.log(json.data)})
     .catch(err => console.log(err))
+    Swal.fire({
+      icon: 'success',
+      title: 'Your Account Created Sucessfully ,Now Login With your Email & Password',
+      // text: '',
+      // footer: '<a href="">Why do I have this issue?</a>'
+    })
   }
 
   return (

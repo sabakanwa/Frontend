@@ -6,12 +6,15 @@ import Image from 'react-bootstrap/Image';
 import Row from 'react-bootstrap/Row';
 import { Link } from 'react-router-dom';
 import { AppRoute } from '../../App';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 
 function CategorySection() {
     const [category, setCategory] = useState([]);
 
     useEffect(() => {
+        AOS.init();
         axios.get(`${AppRoute}api/categoryByName`)
             .then((json) => {
                 setCategory(json.data.category);

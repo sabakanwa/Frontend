@@ -3,12 +3,15 @@ import axios from 'axios';
 import Card from 'react-bootstrap/Card';
 import { Link } from 'react-router-dom';
 import { AppRoute } from '../../App';
-
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 function ItemCard() {
     const [item, setItem] = useState([]);
 
     useEffect(() => {
+        AOS.init();
+    
         axios.get(`${AppRoute}api/getAllItems`)
             .then(json => {
                 setItem(json.data.item);
@@ -25,17 +28,19 @@ function ItemCard() {
                     Impedit quos perferendis ipsum neque id culpa.
                 </p>
             </div>
-            <div className="container">
+            <div className="container" >
                 <div className="row">
                     {item.map((val, key) => (
-                        <div className="col-lg-3 col-md-4 col-sm-6 my-2" key={key}>
-                            <Card>
-                                <Link to={`/item/${val._id}`}>
-                                    <Card.Img
+                        <div className="col-lg-3 col-md-4 col-sm-6 my-2"  key={key}>
+                            <Card >
+                                <Link  to={`/item/${val._id}` } >
+                                    <Card.Img 
                                         variant="top"
-                                        src={val.thumbnail}
+                                        src={val.thumbnail} 
                                         style={{ width: '100%', height: '190px', objectFit: 'cover' }}
+                                        data-aos="zoom-in-up"
                                     />
+                                    
                                 </Link>
                                 <Card.Body style={{ background: '#E49B0F', color: 'black' }}>
                                     <Card.Title>{val.ItemName}</Card.Title>

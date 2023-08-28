@@ -1,7 +1,15 @@
-import React from 'react'
+
+import React,{useEffect} from "react";
 import Carousel from 'react-bootstrap/Carousel'
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import "./Slider.css"
+
 function slider() {
+  useEffect(() => {
+    AOS.init();
+  }, [])
+
   return (
 
 
@@ -12,13 +20,13 @@ function slider() {
     <img src="./main_img.png" />
   </div> */}
   <div className="text">
-    <h1 className='yell'>Get Fresh <i className='yel'>Food</i></h1>
+    <h1 className='yell'data-aos="fade-left" >Get Fresh <i className='yel'>Food</i></h1>
 
-<h1 className='yell' >In Easy Way</h1>
+<h1 className='yell'  data-aos="fade-left">In Easy Way</h1>
 <p>Lorem ipsum dolor,  amet consectetur adipisicing elit. Cumque facilis, </p>
   </div>
   <div className="image">
-    <img src="./main_img.png" />
+    <img  data-aos="zoom-in" src="./main_img.png" />
   </div>
 </div>
 
@@ -46,7 +54,7 @@ function slider() {
     <Carousel.Item>
       <img
         className="d-block w-100"
-        src="https://tb-static.uber.com/prod/image-proc/processed_images/a7fd869a405fff78c764cffb1cacd033/3ac2b39ad528f8c8c5dc77c59abb683d.jpeg"
+        src="https://images.pexels.com/photos/958545/pexels-photo-958545.jpeg?cs=srgb&dl=pexels-chan-walrus-958545.jpg&fm=jpg"
         alt="Third slide" style={{height:'450px'}}/>
 
       

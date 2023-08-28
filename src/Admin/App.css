@@ -61,6 +61,17 @@ body{
         background-image: linear-gradient(#451049, #00ccff);
     
     }
+    .nav-bar {
+        background-image: linear-gradient(#451049, #00ccff);
+    }
+    
+    /* Media query for screens smaller than 768px */
+    @media (max-width: 768px) {
+        .nav-bar {
+            background-size: cover; /* Adjust background image size */
+            padding: 10px; /* Adjust padding as needed */
+        }
+    }
     .user_sidebar{
         margin-top: 20px;
         padding-top: 20px;

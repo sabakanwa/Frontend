@@ -44,6 +44,7 @@ function ItemCard() {
                                         variant="top"
                                         src={val.thumbnail}
                                         style={{ width: '100%', height: '190px', objectFit: 'cover' }}
+                                        data-aos="zoom-in-up"
                                     />
                                 </Link>
                                 <Card.Body style={{ background: '#E49B0F', color: 'black' }}>

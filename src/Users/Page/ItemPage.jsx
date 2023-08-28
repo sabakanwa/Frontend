@@ -37,6 +37,13 @@ function ItemPage() {
             type: "Add_To_Cart",
             payload
                })
+
+               Swal.fire({
+                title: 'Successfully Added to Cart',
+                text: 'Thanks for your Order',
+                icon: 'success',
+                confirmButtonText: 'Continue Order',
+            })
 }
   
 
@@ -82,7 +89,7 @@ function ItemPage() {
 
                     <div className=' mt-2'><button className="w-50 " onClick={orderNow}
                     // onClick={() => orderNow(singleitem)} disabled={cart_state.cart.some(item => item._id === singleitem._id)}
-                    >Order Now</button></div>
+                    >Add To Cart</button></div>
                      <h5 style={{color:'#b86e14'}} className='my-2' >Please Submit a Review</h5>
                     
                     <div style={{color:'black'}}>

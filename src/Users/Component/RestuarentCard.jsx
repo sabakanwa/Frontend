@@ -5,10 +5,15 @@ import axios from 'axios'
 import Card from 'react-bootstrap/Card';
 import { Link } from 'react-router-dom';
 import { AppRoute } from '../../App';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 function RestuarentCard() {
     const[restuarent, setRestuarent] =useState([])
     useEffect(()=>{
+
+      AOS.init();
+
   axios.get(`${AppRoute}api/getAllRestuarent`)
   .then(json=>{setRestuarent(json.data.restuarent)})
   .catch(err => console.log(err))
@@ -32,7 +37,8 @@ function RestuarentCard() {
    
   <Card className='my-2 bg-light' style={{ height:'350px' }} >
   <Link to={`/restuarent/${val.RestuarentName}`} >
-   <Card.Img variant="top" src={val.RestuarentImage} style={{height:'200px'}} />
+   <Card.Img variant="top" src={val.RestuarentImage} style={{height:'200px'}} 
+   data-aos="zoom-in"/>
    </Link>
       <Card.Body style={{background:' #E49B0F', color:'black'}}>
         <Card.Title>{val.RestuarentName.length > 15 ? val.RestuarentName.slice(0,15)+'...' : val.RestuarentName}</Card.Title>

@@ -9,10 +9,14 @@ import Swal from 'sweetalert2'
 import { AppRoute } from '../../App'
 import { setLogLevel } from 'firebase/app'
 import Footer from '../../Users/Component/Footer'
+import Loader from '../Components/Loader'
+
+
 
 
 function Login() {
   
+  const [isLoading, setIsLoading] = useState(false); 
   const [Email, setEmail] =useState("");
   const [Password, setPassword] = useState("");
 const {state, dispatch} = useContext(GlobalContext)
@@ -21,8 +25,10 @@ const loginUser = (e) => {
   e.preventDefault();
   const payload = {Email, Password}
   console.log(payload)
+  setIsLoading(true);
   axios.post('http://localhost:2500/api/login', payload)
   .then(json => {console.log(json.data)
+    setIsLoading(false);
     Cookies.set('token', json.data.token)
   dispatch({
     type :"LOGIN_USER",
@@ -40,7 +46,7 @@ const loginUser = (e) => {
  
  
   .catch(err => console.log(err))
-
+  setIsLoading(true);
 }
 
   return (
